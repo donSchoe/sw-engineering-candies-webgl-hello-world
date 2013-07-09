@@ -30,7 +30,7 @@ function start() {
   // Only continue if WebGL is available and working
   
   if (gl) {
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
+    gl.clearColor(1.0, 1.0, 1.0, 0.0);  // Clear to white, fully transparent
     gl.clearDepth(1.0);                 // Clear everything
     gl.enable(gl.DEPTH_TEST);           // Enable depth testing
     gl.depthFunc(gl.LEQUAL);            // Near things obscure far things
@@ -278,9 +278,9 @@ function createCubeTexture(text) {
 	var ctx = cubeImage.getContext('2d');
 	ctx.beginPath();
 	ctx.rect(0, 0, ctx.canvas.width, ctx.canvas.height);			
-	ctx.fillStyle = 'white';
+	ctx.fillStyle = 'yellow';
 	ctx.fill();
-	ctx.fillStyle = 'black';
+	ctx.fillStyle = 'purple';
 	ctx.font = "65px Arial";
 	ctx.textAlign = 'center';			
 	ctx.fillText(text, ctx.canvas.width / 2, ctx.canvas.height / 2);
