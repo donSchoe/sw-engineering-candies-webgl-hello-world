@@ -4,7 +4,6 @@ var gl;
 var cubeVerticesBuffer;
 var cubeVerticesTextureCoordBuffer;
 var cubeVerticesIndexBuffer;
-var cubeVerticesIndexBuffer;
 var cubeRotation = 0.0;
 var lastCubeUpdateTime = 0;
 
@@ -247,7 +246,7 @@ function initBuffers() {
     12, 13, 14,     12, 14, 15,   // bottom
     16, 17, 18,     16, 18, 19,   // right
     20, 21, 22,     20, 22, 23    // left
-  ]
+  ];
   
   // Now send the element array to GL
   
@@ -293,7 +292,7 @@ function createCubeTexture(text) {
 	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 	gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
 	gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
-	handleTextureLoaded(cubeImage, texture) 
+	handleTextureLoaded(cubeImage, texture);
 	
 	return texture;
 }
